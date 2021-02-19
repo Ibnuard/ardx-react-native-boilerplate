@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button } from 'react-native-paper'
+import { Button, useTheme } from 'react-native-paper'
 import { Colors } from '../../styles'
 import styles from './styles'
 
@@ -17,8 +17,12 @@ const CustomButton = ({
     labelStyle = styles.labelStyle,
     uppercase = false
 }) => {
+
+    const theme = useTheme()
+
     return (
         <Button
+            theme={theme}
             mode={mode}
             dark={invers}
             disabled={disabled}
